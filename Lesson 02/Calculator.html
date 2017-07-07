@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<body>
+<br> <br> <br>
+<a href="calc2.html">Calculator 2.0</a>
+<h1>
+Calculator
+</h1>
+<script>
+function Myfunction(){
+	var form = document.getElementById("calForm");
+    var numOne= parseInt(form.elements[0].value);
+    var op= form.elements[1].value;
+    var numTwo=parseInt(form.elements[2].value);
+    var ans = 0;
+    if (op=="add"){
+    	ans=numOne+numTwo;
+    } else if(op=="sub"){
+    	ans=numOne-numTwo;
+    } else if(op=="multiply"){
+    	ans=numOne*numTwo;
+    } else if(op=="divide"){
+    	ans=numOne/numTwo;
+    }
+    
+    document.getElementById("output").innerHTML=ans;
+}
+    
+
+
+</script>
+<form id = "calForm">
+<input type="text">
+
+<select>
+  <option value="add">+</option>
+  <option value="sub">-</option>
+  <option value="multiply">*</option>
+  <option value="divide">/</option>
+</select>
+
+<input type="text">
+<br>
+
+</form>
+<button type="button" onclick="Myfunction()">=</button>
+<br>
+
+
+
+
+
+<p id="output">=</p>
+
+</body>
+
+
+</html> 

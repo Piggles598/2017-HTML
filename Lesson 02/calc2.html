@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>
+Calculator 2.0 (feet to inches)
+</h1>
+<script>
+function Myfunction(){
+	var form = document.getElementById("calForm");
+    var numOne= parseInt(form.elements[1].value);
+    var op= form.elements[0].value;
+  
+    var ans = 0;
+    if (op=="Feet to inches"){
+    	ans=numOne*12;
+		} else if(op=="Inches to feet"){
+    	ans=numOne/12;
+    
+    } else if(op=="Feet to meters"){
+    	ans=numOne/0.3048;
+        } else if(op=="Meters to feet"){
+    	ans=numOne*0.3048;
+        }
+       
+    document.getElementById("output").innerHTML=ans;
+}
+    
+
+
+</script>
+<form id = "calForm">
+
+
+<select>
+  <option value="Feet to inches">Feet to inches</option>
+  <option value="Inches to feet">Inches to feet</option>
+   <option value="Feet to meters">Feet to meters</option>
+    <option value="Meters to feet">Meters to feet</option>
+</select>
+
+<input type="text">
+<br>
+
+</form>
+<button type="button" onclick="Myfunction()">=</button>
+<br>
+
+
+
+
+
+<p id="output">=</p>
+
+</body>
+
+</html> 
